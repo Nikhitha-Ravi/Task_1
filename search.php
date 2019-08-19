@@ -1,9 +1,9 @@
 <?php
 
-$link = mysqli_connect("127.0.0.1","root","123456","abhi"); 
+$link = mysqli_connect("127.0.0.1","root","123456","assign"); 
 $set=$_POST['Search'];
 if($set){
-$show ="SELECT * FROM basic where email='$set'";
+$show ="SELECT * FROM basics where email='$set'";
 $result = mysqli_query($link,$show);
 while ($rows=mysqli_fetch_array($result))
  {
