@@ -2,7 +2,7 @@
 $name = filter_input(INPUT_POST,"name");
 $mobile=filter_input(INPUT_POST, "mobile");
 $email=filter_input(INPUT_POST,"email",FILTER_VALIDATE_EMAIL); 
-$social=filter_input(INPUT_POST, "social");
+$social=filter_input(INPUT_POST, "social",FILTER_VALIDATE_EMAIL);
 $password=filter_input(INPUT_POST,"password");                       
 
 $link = mysqli_connect("127.0.0.1","root","123456","assign");
@@ -15,7 +15,7 @@ $sql= "insert into basics values ('$name','$email','$mobile','$social','$passwor
 if ($link->query($sql) === TRUE) {
     echo "Created a contact successfully";
 } 
-else 
+else s
 {
     echo "Please fill in the correct details again." ;
 }

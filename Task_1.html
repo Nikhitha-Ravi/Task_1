@@ -3,22 +3,23 @@
 <title> USER DETAILS </title>
 <link rel="stylesheet" type="Text/css" href="Task_1.css">
 <body>
+
 <center>
 <h1> User Information </h1>
-<form action = "search.php" method = "POST">
-<input type="Search" name="Search" placeholder="Search by ID">
+<form action = "search.php" method = "POST" autocomplete="off">
+<input type="Search" name="Search" placeholder="Search by ID" required >
 <input type="Submit" name="Submit">
 </form>
-<form action = "Text_1.php" method="POST"> 
-<h3> Name : <input type="text" name="name"></h3>
-<h3>Email ID : <input type="email" name="email"></h3>
-<h3>Mobile Number: <input type="text" name="mobile"></h3>
-<h3>Social ID : <input type="text" name="social"></h3>
-<h3>Password : <input type="password" name="password"></h3> 
-<input type="Submit" name="Submit"><br><br>
 
+<form name = "insertion" action = "Text_1.php" method="POST" > 
+<h3> Name : <input type="text" name="name" value="" required ></h3>
+<h3> Email ID : <input type="email" name="email" value="" REQUIRED ></h3>
+<h3>Mobile Number: +91 <input type="text" name="mobile" value ="" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required ></h3>
+<h3>Social ID : <input type="email" name="social" value="" required ></h3>
+<h3>Password : <input type="password" name="password" value =""  required pattern=".{8,}" oninvalid="setCustomValidity('Please enter a strong password ->At least one upper-case ->At least one lower-case->At least one Special symbol-> minimum length should be 8')"></h3>
+																														  
 
-
+<button> Submit </button><br><br>
 
 </form>
 </center>

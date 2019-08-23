@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("127.0.0.1","root","123456","assign"); 
+$link = mysqli_connect("127.0.0.1","root","123456","assign");  
 $set=$_POST['Search'];
 if($set){
 $show ="SELECT * FROM basics where email='$set'";
@@ -22,6 +22,7 @@ echo "<br>";
 
   }
 }
+
 else{
 echo "NOTHING FOUND";
 }
