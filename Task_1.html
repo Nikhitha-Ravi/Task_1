@@ -6,21 +6,25 @@
 
 <center>
 <h1> User Information </h1>
-<form action = "search.php" method = "POST" autocomplete="off">
-<input type="Search" name="Search" placeholder="Search by ID" required >
+<form action = "search.php" method = "POST" autocomplete="off" autocomplete="OFF">
+<input type="Search" name="Search" placeholder="Search by Email ID" required >
 <input type="Submit" name="Submit">
 </form>
 
-<form name = "insertion" action = "Text_1.php" method="POST" > 
-<h3> Name : <input type="text" name="name" value="" required ></h3>
-<h3> Email ID : <input type="email" name="email" value="" REQUIRED ></h3>
-<h3>Mobile Number: +91 <input type="text" name="mobile" value ="" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required ></h3>
-<h3>Social ID : <input type="email" name="social" value="" required ></h3>
-<h3>Password : <input type="password" name="password" value =""  required pattern=".{8,}" oninvalid="setCustomValidity('Please enter a strong password ->At least one upper-case ->At least one lower-case->At least one Special symbol-> minimum length should be 8')"></h3>
-																														  
+<form name = "insertion" action = "Text_1.php" method="POST" autocomplete="OFF" >
+<h3>Name<font color=red>*</font>:<input type="text" name="User_name" value="" required ></h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email ID<font color=red>*</font> :<input type="email" name="Email_id" value="" maxlength="40" REQUIRED ></h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobile Number:
+  <select name="Mobile Number">
+    <option value="India">+91</option>
+      </select>
+	  &nbsp; <input type="text" name="Mobile_no" value ="" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required ></h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Social ID<font color=red>*</font> :<input type="text" name="Social_id" value="" required ></h3>
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password : <input type="Password" name="Password" value =""  required ></h3>
+<button type="Submit">Submit</button>
 
-<button> Submit </button><br><br>
 
+  
 </form>
 </center>
 </body>
